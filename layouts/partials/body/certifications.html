@@ -1,0 +1,29 @@
+<section class="section certifications-section">
+    <h2 class="section-title">
+    <i class="fa {{ .Site.Params.certifications.icon }}"></i>
+    {{ i18n "certifications" }}
+    </h2> {{ range .Site.Params.certifications.list }}
+    <div class="item">
+        <div class="meta">
+            <div class="upper-row">
+                <h3 class="job-title">{{ .title }}</h3>
+                <div class="time">{{ .dates }}</div>
+            </div>
+            <!--//upper-row-->
+            <div class="company">
+                {{ .company | markdownify}}
+            </div>
+        </div>
+        <!--//meta-->
+        <div class="details">
+            <p>
+                {{ with .details }} 
+                {{ . | markdownify }}{{ end }}
+            </p>
+        </div>
+        <!--//details-->
+    </div>
+    <!--//item-->
+    {{ end }}
+</section>
+<!--//section-->

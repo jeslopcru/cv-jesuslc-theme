@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+
+{{ partial "head/head.html" . }}
+{{ partial "head/meta.html" . }}
+{{ partial "head/scripts.html" . }}
+
+</head>
+<body>
+    <div class="wrapper">
+
+    {{ partial "sidebar/sidebar.html" . }}
+
+	<div class="main-wrapper">
+
+    {{ if .Site.Params.summary.enable }}
+	{{ partial "body/summary.html" . }}
+    {{ end }}
+
+    {{ if .Site.Params.experiences.enable }}
+    {{ partial "body/experiences.html" . }}
+    {{ end }}
+
+    {{ if .Site.Params.certifications.enable }}
+    {{ partial "body/certifications.html" . }}
+    {{ end }}
+
+    {{ if .Site.Params.projects.enable }}
+    {{ partial "body/projects.html" . }}
+    {{ end }}
+
+    {{ if .Site.Params.talks.enable }}
+    {{ partial "body/talks.html" . }}
+    {{ end }}
+
+    {{ if .Site.Params.skills.enable }}
+	{{ partial "body/skills.html" . }}
+    {{ end }}
+
+	</div><!--//main-body-->
+    </div>
+
+	{{ partial "footer/footer.html" . }}
+
+    {{ partial "footer/scripts.html" . }}
+</body>
+</html>

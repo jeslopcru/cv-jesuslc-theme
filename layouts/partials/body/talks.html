@@ -1,0 +1,18 @@
+<section class="section talks-section">
+    <h2 class="section-title">
+    <i class="fa {{ .Site.Params.talks.icon }}"></i>
+    {{ i18n "talks" }}
+    </h2> {{ range .Site.Params.talks.list }}
+    <div class="item">
+        <div class="meta">
+            <span class="project-title"><a href="{{ .url }}">{{ .title }}</a>
+        </span>
+        </div>
+        <div class="details">
+         <p class="project-tagline">{{ with .tagline }}{{ . | markdownify }}{{ end }}</p>
+        </div>
+    </div>
+    <!--//item-->
+    {{ end }}
+</section>
+<!--//section-->
