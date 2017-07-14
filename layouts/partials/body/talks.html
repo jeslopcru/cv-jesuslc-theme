@@ -5,7 +5,10 @@
     </h2> {{ range .Site.Params.talks.list }}
     <div class="item">
         <div class="meta">
+         <div class="upper-row">
             <span class="project-title"><a href="{{ .url }}">{{ .title }}</a>
+                <div class="time">{{ .dates }}</div>
+            </div>
         </span>
         </div>
         <div class="details">
